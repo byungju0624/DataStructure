@@ -140,3 +140,5 @@ linkedlist.append(18);
 linkedlist.append(11);
 linkedlist.append(12);
 linkedlist.print();
+
+export default LinkedList;

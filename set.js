@@ -64,17 +64,21 @@ class Set {
       }
       return differenceSet;
     };
+
+    //부분집합
+    this.subset = otherSet => {
+        if(otherSet.size() < this.size()){
+            return false;
+        }else {
+            let values = this.values();
+            for(let i = 0; i < values.length; i++) {
+                if(!otherSet.has(values[i])){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
   }
 }
-let setA = new Set();
-setA.add(1);
-setA.add(2);
-setA.add(3);
 
-let setB = new Set();
-setB.add(4);
-setB.add(5);
-setB.add(6);
-
-let unionAB = setA.union(setB);
-console.log(unionAB.values());
