@@ -198,3 +198,5 @@ console.log(tree.max());
 
 console.log(tree.search(1) ? "키 1을 찾았습니다" : "키 1을 못찾았습니다");
 console.log(tree.search(8) ? "키 8을 찾았습니다" : "키 8을 못찾았습니다");
+
+export default BinarySearchTree;

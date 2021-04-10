@@ -50,3 +50,5 @@ console.log(dictionary.values());
 dictionary.remove("byung");
 console.log(dictionary.size());
 console.log(dictionary.keys());
+
+export default Dictionary;

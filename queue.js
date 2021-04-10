@@ -127,3 +127,5 @@ const hotPotato = (nameList, num) => {
 let names = ["john", "jessey", "camelo", "eujin", "tom"];
 let winner = hotPotato(names, 10);
 console.log(`${winner} 승리!`);
+
+export default Queue;
