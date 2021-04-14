@@ -149,5 +149,35 @@ class ArrayList {
     this.quickSort = () => {
       quick(array, 0, array.length - 1); //정렬할 배열과 처음/끝 인덱스를 인자로 재귀 호출
     };
+    //순차 검색 또는 선형 검색
+
+    this.sequentialSearch = (item) => {
+      for (let i = 0; i < array.length; i++) {
+        if (item === array[i]) {
+          return i;
+        }
+      }
+      return -1;
+    };
+
+    this.binarySearch = (item) => {
+      this.quickSort();
+      let row,
+        high = array.length - 1,
+        mid,
+        element;
+      while (low <= high) {
+        mid = Math.floor((low + high) / 2);
+        element = array[mid];
+        if (element < item) {
+          low = mid + 1;
+        } else if (element > item) {
+          high = mid - 1;
+        } else {
+          return mid;
+        }
+      }
+      return -1;
+    };
   }
 }
