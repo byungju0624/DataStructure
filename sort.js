@@ -166,18 +166,18 @@ class ArrayList {
         high = array.length - 1,
         mid,
         element;
-      while (low <= high) {
-        mid = Math.floor((low + high) / 2);
-        element = array[mid];
-        if (element < item) {
+      while (low <= high) { //low가 high보다 작다면
+        mid = Math.floor((low + high) / 2);//정가운데 인덱스를 찾아
+        element = array[mid];//이에 해당하는 원소를 담는다.
+        if (element < item) {//검색할 원소보다 작다면 더 낮은 값을 대상으로 반복
           low = mid + 1;
-        } else if (element > item) {
+        } else if (element > item) { //검색할 원소보다 크다면 더 큰 값을 대상으로 반복
           high = mid - 1;
         } else {
-          return mid;
+          return mid;//검색 성공시 해당 인덱스 반환
         }
       }
-      return -1;
+      return -1;//low가 high보다 크다는 것은 결과값이 존재하지 않다는 것이니 -1 반환
     };
   }
 }
